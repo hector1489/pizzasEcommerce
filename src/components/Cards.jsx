@@ -4,7 +4,7 @@ import DataContext from "../context/DataContext"
 import { useNavigate } from "react-router-dom"
 
 const Cards = () => {
-  const { data, addToCart } = useContext(DataContext)
+  const { data, addToCart, formatNumber } = useContext(DataContext)
   console.log(data)
   const navigate = useNavigate()
 
@@ -29,7 +29,7 @@ const Cards = () => {
                 ))}
               </ListGroup>
               <Card.Text className="fw-bold fs-5">
-              ${item.price}
+              ${formatNumber(item.price)}
             </Card.Text>
               <Button variant="danger" className="me-3" onClick={() => addToCart(item)}>
                 Añadir al 🛒

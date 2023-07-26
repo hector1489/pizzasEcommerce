@@ -4,16 +4,12 @@ import { NavLink } from 'react-router-dom'
 import DataContext from "../context/DataContext"
 
 const Browser = () => {
-  const { shopCart } = useContext(DataContext)
+  const { shopCart, formatNumber  } = useContext(DataContext)
 
   const setActiveClass = ({ isActive }) =>
    (isActive ?
     "text-warning fw-bold text-decoration-none me-3" :
     "text-secondary text-decoration-none me-3")
-
-  const formatNumber = (number) => {
-    return number.toLocaleString()
-  }
 
   const calculateTotal = () => {
     return shopCart.reduce((total, { count, price }) => total + price * count, 0)

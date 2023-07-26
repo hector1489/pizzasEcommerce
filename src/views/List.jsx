@@ -5,7 +5,7 @@ import DataContext from '../context/DataContext'
 
 const List = () => {
   const { id } = useParams()
-  const { data, addToCart } = useContext(DataContext)
+  const { data, addToCart,formatNumber } = useContext(DataContext)
   const [product, setProduct] = useState()
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const List = () => {
                   </li>
                 ))}
               </ul>
-              <Card.Text className="fw-bold fs-5">${product?.price}</Card.Text>
+              <Card.Text className="fw-bold fs-5">${formatNumber(product?.price)}</Card.Text>
               <Button variant="danger" className="me-3" onClick={() => addToCart(product)}>
                 Añadir al 🛒
               </Button>

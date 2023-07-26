@@ -57,6 +57,10 @@ function App() {
     )
   }
 
+  const formatNumber = (number) => {
+    return number.toLocaleString()
+  }
+
   const globalState = {
     data,
     setData,
@@ -66,6 +70,7 @@ function App() {
     increase,
     decrease,
     removeFromCart,
+    formatNumber,
   };
 
   return (
