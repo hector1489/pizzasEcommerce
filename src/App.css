@@ -1,0 +1,148 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-home {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url("./assets/1366_2000.jpg");
+    background-size: cover;
+    height: 150px;
+    color: white;
+}
+
+/*cards*/
+.card {
+    width: 300px;
+    min-height: 400px;
+    margin-bottom: 30px;
+    box-shadow: 0px 1px 10px rgba(250, 250, 250, 0.336);
+    cursor: default;
+    transition: all 400ms ease;
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(199, 189, 189, 0.973);
+    transform: translateY(-3%);
+}
+
+.card-body {
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 10px;
+}
+
+
+.container-projects {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+
+/*detail*/
+.container-list {
+    display: flex;
+    justify-content: center;
+}
+
+.product-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+
+.card-list {
+    width: 40rem;
+}
+
+/*carro*/
+.container-cart {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-ul {
+    list-style: none;
+    padding: 0;
+    background-color: rgb(182, 136, 21);
+    border-radius: 5px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+.img-small {
+    width: 80px;
+    height: 50px;
+}
+
+.item-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    gap: 10px;
+    color: white;
+  }
+
+.quantity-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+}
+
+.total-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-price {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-price button {
+    width: 100px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-price button:hover {
+    background-color: #ffa000;
+}
