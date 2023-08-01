@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom"
 
 const Cards = () => {
   const { data, addToCart, formatNumber } = useContext(DataContext)
-  console.log(data)
   const navigate = useNavigate()
 
   const handleProduct = (id) => {

@@ -23,14 +23,14 @@ const Cart = () => {
         <h2>Detalles del pedido:</h2>
       </div>
       <div className="p-1">
-      <ul className="cart-ul">
+        <ul className="cart-ul">
           {updatedCart?.map((item) => (
             <li key={item?.id} className="cart-item">
-               <div className="item-details">
-              <img src={item?.img} alt={item?.name} className="img-small" />
+              <div className="item-details">
+                <img src={item?.img} alt={item?.name} className="img-small" />
                 <span className="fw-bold" style={{ textTransform: 'capitalize' }}>{item?.name}</span>
                 <div className="quantity-controls">
-                <span className="fw-bold">Precio: $ {formatNumber(item?.price)} </span>
+                  <span className="fw-bold">Precio: $ {formatNumber(item?.price)} </span>
                   <Button variant="danger" onClick={() => decrease(item?.id)}>-</Button>
                   <b>{item?.count}</b>
                   <Button variant="primary" onClick={() => increase(item?.id)}>+</Button>
@@ -43,10 +43,12 @@ const Cart = () => {
         <div className="total-price">
           <span> Precio total del pedido: ${formatNumber(total)}</span>
         </div>
-        <div className="btn-price">
-        <Button onClick={clearCart}>Vaciar Carrito</Button>
-          <Button>Ir a pagar</Button>
-        </div>
+        {total > 0 && (
+          <div className="btn-price">
+            <Button onClick={clearCart}>Vaciar Carrito</Button>
+            <Button>Ir a pagar</Button>
+          </div>
+        )}
       </div>
     </div>
   )
