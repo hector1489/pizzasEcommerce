@@ -1,9 +1,11 @@
 import { useContext, useEffect } from "react"
 import DataContext from "../context/DataContext"
 import { Button } from "react-bootstrap"
+import { useNavigate } from 'react-router-dom'
 
 const Cart = () => {
   const { shopCart, increase, decrease, removeFromCart, formatNumber } = useContext(DataContext)
+  const navigate = useNavigate()
 
   const updatedCart = shopCart.filter((item) => item.count > 0)
 
@@ -15,6 +17,11 @@ const Cart = () => {
 
   const clearCart = () => {
     updatedCart.forEach((item) => removeFromCart(item.id))
+  }
+
+  const handleGoToPaying = () => {
+    clearCart()
+    navigate('/paying')
   }
 
   return (
@@ -46,7 +53,7 @@ const Cart = () => {
         {total > 0 && (
           <div className="btn-price">
             <Button onClick={clearCart}>Vaciar Carrito</Button>
-            <Button>Ir a pagar</Button>
+            <Button onClick={handleGoToPaying}>Ir a pagar</Button>
           </div>
         )}
       </div>

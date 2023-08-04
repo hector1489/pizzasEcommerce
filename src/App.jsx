@@ -8,6 +8,7 @@ import NotFound from './views/NotFound'
 import List from './views/List'
 import dataJson from './pizzas.json'
 import Browser from './components/Browser'
+import Paying from './views/Paying'
 
 function App() {
   const [data, setData] = useState([])
@@ -83,6 +84,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/list/:id" element={<List />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/paying" element={<Paying />} />
           </Routes>
         </div>
       </BrowserRouter>
