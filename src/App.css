@@ -60,16 +60,18 @@
 }
 
 .product-image {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
+    width: 200px;
+    height: 200px;
     margin-right: 5px;
+    border-radius: 5px;
 
 }
 
 
 .card-list {
     width: 40rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /*carro*/
@@ -123,7 +125,6 @@
     margin-top: 20px;
     text-align: center;
     font-weight: bold;
-    color: white;
 }
 
 .btn-price {

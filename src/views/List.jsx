@@ -24,7 +24,7 @@ const List = () => {
   return (
     <div className="container-list m-3">
       <Card key={product?.id} className="p-2 card-list d-flex flex-wrap">
-        <div className="d-flex">
+        <div className="d-flex align-items-center">
           <Card.Img variant="top" src={product?.img} className="product-image" />
           <Card.Body className="d-flex flex-column justify-content-between">
             <div>
